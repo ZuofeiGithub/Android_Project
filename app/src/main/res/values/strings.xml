@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android程序迭代</string>
+    <string name="title_content">我是标题</string>
+    <string name="content">我是Fragment内容页面</string>
 </resources>
