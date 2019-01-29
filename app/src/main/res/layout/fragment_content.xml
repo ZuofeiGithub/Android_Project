@@ -9,4 +9,9 @@
         android:text="@string/content"
         android:textSize="20sp"
         android:textStyle="bold"/>
+    <Button
+        android:id="@+id/add_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动态添加fragment"/>
 </LinearLayout>

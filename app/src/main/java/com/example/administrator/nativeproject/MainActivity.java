@@ -3,9 +3,7 @@ package com.example.administrator.nativeproject;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button navigation_btn;
