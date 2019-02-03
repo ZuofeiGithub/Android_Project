@@ -47,6 +47,10 @@ public class CameraActivity extends AppCompatActivity {
         startActivityForResult(intent,REQ_2);
     }
 
+    public void customCamera(View view){
+        startActivity(new Intent(this,CustomCamera.class));
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

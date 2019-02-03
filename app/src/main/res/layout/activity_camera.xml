@@ -12,11 +12,16 @@
         android:onClick="startCamera1"
         tools:ignore="OnClick" />
     <Button
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="打开相机"
         android:onClick="startCamera2"
+        tools:ignore="OnClick" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义相机"
+        android:onClick="customCamera"
         tools:ignore="OnClick" />
     <ImageView
         android:id="@+id/iv"
