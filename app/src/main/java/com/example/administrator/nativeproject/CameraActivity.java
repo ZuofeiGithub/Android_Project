@@ -1,17 +1,21 @@
 package com.example.administrator.nativeproject;
 
+import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.administrator.nativeproject.utils.PermissionsUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,6 +34,32 @@ public class CameraActivity extends AppCompatActivity {
         iv = findViewById(R.id.iv);
         mFilePath = Environment.getExternalStorageDirectory().getPath();//获取SDK路径
         mFilePath = mFilePath + "/"+"temp.png";
+
+        String[] permissions = new String[]{Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        //        PermissionsUtils.showSystemSetting = false;//是否支持显示系统设置权限设置窗口跳转
+        //这里的this不是上下文，是Activity对象！
+        PermissionsUtils.getInstance().chekPermissions(this, permissions, permissionsResult);
+    }
+
+    //创建监听权限的接口对象
+    PermissionsUtils.IPermissionsResult permissionsResult = new PermissionsUtils.IPermissionsResult() {
+        @Override
+        public void passPermissons() {
+            Toast.makeText(CameraActivity.this, "权限通过，可以做其他事情!", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void forbitPermissons() {
+//            finish();
+            Toast.makeText(CameraActivity.this, "权限不通过!", Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        //就多一个参数this
+        PermissionsUtils.getInstance().onRequestPermissionsResult(this, requestCode, permissions, grantResults);
     }
 
        public void startCamera1(View view){
