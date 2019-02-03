@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
         android:text="@string/content"
         android:textSize="20sp"
         android:textStyle="bold"/>
     <Button
+        android:id="@+id/start_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开相机"
+        android:textColor="#fff"
+        android:background="#361051"/>
+    <Button
         android:id="@+id/add_fragment"
-        android:layout_width="wrap_content"
+        android:background="#3610f4"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="动态添加fragment"/>
 </LinearLayout>
