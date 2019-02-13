@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void testJSON(){
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
