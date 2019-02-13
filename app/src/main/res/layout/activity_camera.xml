@@ -10,13 +10,13 @@
         android:layout_height="wrap_content"
         android:text="打开相机"
         android:onClick="startCamera1"
-        tools:ignore="OnClick" />
+         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="打开相机"
+        android:text="打开相机1"
         android:onClick="startCamera2"
-        tools:ignore="OnClick" />
+         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

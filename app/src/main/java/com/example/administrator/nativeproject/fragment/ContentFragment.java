@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.administrator.nativeproject.CameraActivity;
-import com.example.administrator.nativeproject.MainActivity;
+import com.example.administrator.nativeproject.DynamicFragmentActivity;
 import com.example.administrator.nativeproject.R;
 
 public class ContentFragment extends Fragment {
@@ -32,6 +32,9 @@ public class ContentFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"动态添加fragment",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), DynamicFragmentActivity.class);
+                startActivity(intent);
             }
         });
 

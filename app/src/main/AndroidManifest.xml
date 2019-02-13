@@ -12,6 +12,7 @@
         android:roundIcon="@drawable/clock"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".DynamicFragmentActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +33,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".CameraActivity" />
         <activity android:name=".CustomCamera" />
-        <activity android:name=".CameraResult"></activity>
+        <activity android:name=".CameraResult" />
     </application>
 
 </manifest>
