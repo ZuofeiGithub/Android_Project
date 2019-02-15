@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.administrator.nativeproject.CameraActivity;
 import com.example.administrator.nativeproject.DynamicFragmentActivity;
+import com.example.administrator.nativeproject.Fragmention;
 import com.example.administrator.nativeproject.R;
 
 public class ContentFragment extends Fragment {
@@ -19,6 +20,7 @@ public class ContentFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_content,null);
         Button addfragBtn = view.findViewById(R.id.add_fragment);
         Button startCamera = view.findViewById(R.id.start_camera);
+        Button fragmention = view.findViewById(R.id.fragmention);
         startCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +36,16 @@ public class ContentFragment extends Fragment {
                 Toast.makeText(getActivity(),"动态添加fragment",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), DynamicFragmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        fragmention.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"Fragmention",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), Fragmention.class);
                 startActivity(intent);
             }
         });

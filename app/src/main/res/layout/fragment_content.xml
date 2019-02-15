@@ -25,4 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="动态添加fragment"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragmention"
+        android:text="Fragmentation使用"/>
 </LinearLayout>

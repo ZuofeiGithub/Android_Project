@@ -12,7 +12,8 @@
         android:roundIcon="@drawable/clock"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".DynamicFragmentActivity"></activity>
+        <activity android:name=".Fragmention"></activity>
+        <activity android:name=".DynamicFragmentActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
