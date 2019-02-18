@@ -3,12 +3,13 @@ package com.example.administrator.nativeproject;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.view.Window;
-import android.widget.Button;
+import android.widget.TextView;
+
+import com.squareup.leakcanary.LeakCanary;
+
 
 public class MainActivity extends AppCompatActivity {
-    Button navigation_btn;
-    // Used to load the 'native-lib' library on application startup.
+    private TextView logView;
     static {
         System.loadLibrary("native-lib");
     }
@@ -19,10 +20,27 @@ public class MainActivity extends AppCompatActivity {
         //requestWindowFeature(Window.FEATURE_NO_TITLE);//去除标题栏
         setContentView(R.layout.activity_main);
 
+
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(getApplication());
         // Example of a call to a native method
 //        TextView tv = findViewById(R.id.sample_text);
 //        tv.setText(stringFromJNI());
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 
     private void testJSON(){

@@ -30,4 +30,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/fragmention"
         android:text="Fragmentation使用"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/service_btn"
+        android:text="android服务"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/adapter_btn"
+        android:text="adapter的使用示例"/>
 </LinearLayout>

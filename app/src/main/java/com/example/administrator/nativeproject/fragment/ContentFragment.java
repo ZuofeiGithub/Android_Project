@@ -9,10 +9,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.administrator.nativeproject.AdapterDemo;
 import com.example.administrator.nativeproject.CameraActivity;
 import com.example.administrator.nativeproject.DynamicFragmentActivity;
 import com.example.administrator.nativeproject.Fragmention;
 import com.example.administrator.nativeproject.R;
+import com.example.administrator.nativeproject.ServiceActivity;
 
 public class ContentFragment extends Fragment {
     @Override
@@ -21,6 +23,8 @@ public class ContentFragment extends Fragment {
         Button addfragBtn = view.findViewById(R.id.add_fragment);
         Button startCamera = view.findViewById(R.id.start_camera);
         Button fragmention = view.findViewById(R.id.fragmention);
+        Button service_btn = view.findViewById(R.id.service_btn);
+        Button adapter_btn = view.findViewById(R.id.adapter_btn);
         startCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +54,25 @@ public class ContentFragment extends Fragment {
             }
         });
 
+        service_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"服务界面",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), ServiceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        adapter_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"adapter布局",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), AdapterDemo.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
