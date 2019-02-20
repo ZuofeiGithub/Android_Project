@@ -13,6 +13,7 @@ import com.example.administrator.nativeproject.AdapterDemo;
 import com.example.administrator.nativeproject.CameraActivity;
 import com.example.administrator.nativeproject.DynamicFragmentActivity;
 import com.example.administrator.nativeproject.Fragmention;
+import com.example.administrator.nativeproject.NineGrideActivity;
 import com.example.administrator.nativeproject.R;
 import com.example.administrator.nativeproject.ServiceActivity;
 
@@ -25,6 +26,7 @@ public class ContentFragment extends Fragment {
         Button fragmention = view.findViewById(R.id.fragmention);
         Button service_btn = view.findViewById(R.id.service_btn);
         Button adapter_btn = view.findViewById(R.id.adapter_btn);
+        Button ninegride = view.findViewById(R.id.ninegride);
         startCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +72,16 @@ public class ContentFragment extends Fragment {
                 Toast.makeText(getActivity(),"adapter布局",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), AdapterDemo.class);
+                startActivity(intent);
+            }
+        });
+
+        ninegride.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"九宫格",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), NineGrideActivity.class);
                 startActivity(intent);
             }
         });

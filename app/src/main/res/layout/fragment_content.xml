@@ -41,4 +41,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/adapter_btn"
         android:text="adapter的使用示例"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ninegride"
+        android:text="九宫格NineGridImageView"/>
 </LinearLayout>

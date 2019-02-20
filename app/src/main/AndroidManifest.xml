@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".NativeApplication"
@@ -14,7 +15,8 @@
         android:roundIcon="@drawable/clock"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".AdapterDemo"></activity>
+        <activity android:name=".NineGrideActivity"></activity>
+        <activity android:name=".AdapterDemo" />
         <activity android:name=".ServiceActivity" />
         <activity android:name=".Fragmention" />
         <activity android:name=".DynamicFragmentActivity" />
