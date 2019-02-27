@@ -1,1 +1,3 @@
-include ':app'
+include ':app', ':stv', ':stv_new'
+project(':stv').projectDir = new File('SpannableTextView/stv')
+project(':stv_new').projectDir = new File('stv')

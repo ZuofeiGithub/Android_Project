@@ -41,7 +41,9 @@
         <activity android:name=".CameraActivity" />
         <activity android:name=".CustomCamera" />
         <activity android:name=".CameraResult" /> <!-- 支持显示隐士启动 -->
+        <activity android:name=".ShowPicViewActivity"/>
         <service android:name=".service.LogService" />
+
     </application>
 
 </manifest>

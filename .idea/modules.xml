@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android_Project.iml" filepath="$PROJECT_DIR$/Android_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Android_Project.iml" filepath="$PROJECT_DIR$/.idea/Android_Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpannableTextView/stv/stv.iml" filepath="$PROJECT_DIR$/SpannableTextView/stv/stv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stv/stv_new.iml" filepath="$PROJECT_DIR$/stv/stv_new.iml" />
     </modules>
   </component>
 </project>
