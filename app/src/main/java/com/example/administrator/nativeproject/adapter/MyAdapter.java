@@ -39,7 +39,7 @@ public class MyAdapter extends BaseAdapter {
         ViewHolder holder = null;
         if(convertView == null){
             convertView = mInflater.inflate(R.layout.activity_adapter_demo_item,parent,false);
-            holder = new ViewHolder();
+            holder = new ViewHolder(); //各种控件的引用
             holder.mTitle = convertView.findViewById(R.id.id_title);
             holder.mDesc = convertView.findViewById(R.id.id_desc);
             holder.mTime = convertView.findViewById(R.id.id_time);
